@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Meet new people and start anonymous text conversations on Chaya.2bd. Text chat is available now; video chat is coming soon.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://YOUR-RENDER-DOMAIN.onrender.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chaya.2bd — Meet Someone New">
+  <meta property="og:description" content="Start a casual text conversation with a random stranger. No signup required.">
+  <meta property="og:url" content="https://YOUR-RENDER-DOMAIN.onrender.com/">
+  <meta property="og:site_name" content="Chaya.2bd">
+  <meta name="twitter:card" content="summary">
+  <title>Chaya.2bd — Meet Someone New | Anonymous Text Chat</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Chaya.2bd","description":"A simple place to start casual anonymous text conversations.","url":"https://YOUR-RENDER-DOMAIN.onrender.com/"}
+  </script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Chaya.2bd home"><span class="brand-mark" aria-hidden="true">ച</span><span>Chaya<span class="brand-dot">.2bd</span></span></a>
+      <div class="header-right"><span class="online-pill"><span class="pulse-dot"></span><span id="onlineCount">Connecting…</span></span><button class="icon-button" id="aboutButton" aria-label="About Chaya.2bd" title="About">i</button></div>
+    </header>
+
+    <main>
+      <section class="hero" id="homeView">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE CHAT CAN GO A LONG WAY</div>
+        <h1>Someone new.<br><em>Something to talk about.</em></h1>
+        <p class="hero-copy">Meet a stranger, share a thought, and see where the conversation goes. Simple, casual, and anonymous.</p>
+        <div class="mode-grid">
+          <button class="mode-card mode-card-active" id="textModeButton">
+            <span class="mode-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2 1-4.2A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg></span>
+            <span class="mode-title">Text chat</span><span class="mode-description">Start a conversation now</span><span class="mode-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="mode-card mode-card-locked" id="videoModeButton" aria-describedby="videoStatus">
+            <span class="mode-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="m16 10 5-3v10l-5-3z"/></svg></span>
+            <span class="mode-title">Video chat <span class="lock-mark" aria-hidden="true">⌑</span></span><span class="mode-description" id="videoStatus">Coming soon</span><span class="mode-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="hero-bottom"><span><span class="tiny-check">✓</span> No account needed</span><span><span class="tiny-check">✓</span> One conversation at a time</span><span><span class="tiny-check">✓</span> Leave whenever you want</span></div>
+        <div class="how-card"><div class="how-heading">HOW IT WORKS</div><div class="steps"><div class="step"><span class="step-number">01</span><span>Tap text chat</span></div><div class="step-divider"></div><div class="step"><span class="step-number">02</span><span>Find a stranger</span></div><div class="step-divider"></div><div class="step"><span class="step-number">03</span><span>Say hello</span></div></div></div>
+      </section>
+
+      <section class="chat-view hidden" id="chatView" aria-label="Text chat">
+        <div class="chat-topline"><button class="back-button" id="backButton">← <span>Home</span></button><div class="chat-heading"><span class="chat-status-dot"></span><span id="chatStatus">Ready to connect</span></div><button class="text-button" id="endButton">End chat</button></div>
+        <div class="chat-layout">
+          <aside class="chat-side"><div class="partner-avatar" id="partnerAvatar">?</div><h2 id="partnerTitle">Your next conversation</h2><p id="partnerSubtitle">A new person is just a hello away.</p><div class="privacy-note"><span class="privacy-symbol">◇</span><div><strong>Keep it comfortable</strong><p>Don't share passwords, financial details, or private information.</p></div></div></aside>
+          <div class="conversation">
+            <div class="message-area" id="messageArea" aria-live="polite"><div class="empty-chat"><div class="empty-chat-icon">↗</div><h3>Your conversation starts here</h3><p>Tap the button below to find someone to chat with.</p></div></div>
+            <div class="typing-row hidden" id="typingRow"><span class="typing-dots"><i></i><i></i><i></i></span><span id="typingText">The other person is typing</span></div>
+            <div class="system-note hidden" id="systemNote"></div>
+            <form class="composer" id="messageForm"><input id="messageInput" maxlength="600" autocomplete="off" placeholder="Write a message…" aria-label="Write a message" disabled><button type="submit" id="sendButton" aria-label="Send message" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.5 18-3.8-7.7L2 9.5 21 3Z"/><path d="M9.7 13.3 21 3"/></svg></button></form>
+          </div>
+        </div>
+        <div class="chat-actions"><button class="primary-button" id="startButton"><span>Find a stranger</span><span aria-hidden="true">↗</span></button><button class="secondary-button hidden" id="nextButton">Next stranger <span aria-hidden="true">→</span></button><span class="action-hint" id="actionHint">You'll be matched when someone is available.</span></div>
+      </section>
+
+      <section class="seo-copy"><div class="seo-rule"></div><div><p class="section-kicker">A SPACE FOR EVERYDAY CONVERSATIONS</p><h2>Say hello to someone you haven't met.</h2><p>Chaya.2bd is a simple stranger text chat experience for casual conversations. Talk about music, movies, college, work, hobbies, or whatever is on your mind. Text chat is available now. Video chat is coming soon.</p></div></section>
+    </main>
+    <footer><a class="footer-brand" href="/">Chaya.2bd</a><span>Keep it kind. Keep it respectful.</span><button id="footerAbout">About & safety</button></footer>
+  </div>
+
+  <dialog id="aboutDialog" class="about-dialog"><button class="dialog-close" id="closeDialog" aria-label="Close">×</button><div class="dialog-mark">ച</div><p class="section-kicker">ABOUT CHAYA.2BD</p><h2>A little space to connect.</h2><p>Chaya.2bd helps people start casual text conversations without creating an account. Be respectful, don't share sensitive personal information, and leave any conversation that makes you uncomfortable.</p><button class="primary-button dialog-done" id="dialogDone">Got it</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
